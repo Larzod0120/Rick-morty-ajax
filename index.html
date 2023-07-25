@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+    <header>
+        <section class="header-info">
+            <figure class="header-logo-cont">
+                <div class="logo-header">
+                    LOGO
+                </div>
+            </figure>
+            <nav>
+                <ul>
+                    <li>Docs</li>
+                    <li>About</li>
+                </ul>
+                <button class="btn-sup">SUPPORT US</button>
+            </nav>
+        </section>
+        <section class="header-title">
+            <h1>The Rick and Morty API</h1>
+        </section>
+    </header>
+    <main>
+        <section class="card-cont">
+            <div class="modal" id="modal-window" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div id="modal-body"class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="btn-close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="button-cont">
+            <button id="random">New Characters</button>
+        </section>
+    </main>
+    <footer>
+        <section class="status-cont">
+            <span class="status-item">CHARACTERS: 826</span>
+            <span class="status-item">LOCATIONS: 126</span>
+            <span class="status-item">EPISODES: 51</span>
+            <span class="status-item">SERVER STATUS: ACTIVE</span>
+        </section>
+        <section class="dev-by">
+            <figure class="dev-by-cont">
+                <p>IMAGEN</p>
+            </figure>
+            <figure class="dev-by-cont">
+                <p>IMAGEN</p>
+            </figure>
+        </section>
+        <section class="brand-cont">
+            <figure class="brand">
+                <p>GITHUB</p>
+            </figure>
+            <figure class="brand">
+                <p>TWITTER</p>
+            </figure>
+            <figure class="brand">
+                <p>LIKE</p>
+            </figure>
+        </section>
+        <section class="credits-cont">
+            <p>by <a href="#">Frederick Castillo</a> 2023</p>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</body>
+</html>
