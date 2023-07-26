@@ -7,7 +7,9 @@ const getCard = () => {
         url: 'https://rickandmortyapi.com/api/character',
         success: function (result) {
             characters = result.results;
+            allCharacters();
             renderCharacters();
+            
 
         }, error: function (error) {
             console.log(error)
@@ -63,7 +65,24 @@ function renderCharacters() {
 
         
 
-    }
+}
+
+//ALL CHARACTERS FUNCTION
+
+function allCharacters() {
+    characters.forEach((ch) => {
+        $('.characters-cont').append(`
+        <div class="character">
+        <figure class="character-cont">
+        <img src="${ch.image}">
+        </figure>
+        </div>
+        `)
+    })
+}
+
+
+
 
 $(document).ready(function ($) {
     

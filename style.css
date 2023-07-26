@@ -91,7 +91,7 @@ ul li:hover {
 }
 
 
-.btn-sup:hover {
+.btn:hover {
     background-color: var(--orange);
     color: #fff;
 }
@@ -251,4 +251,65 @@ footer {
 .credits-cont a:hover {
     color: var(--orange);
     border-bottom: none;
+}
+
+
+
+/*Estilos de página All Characters */
+
+.characters-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0;
+    gap: 30px;
+} 
+
+.character-cont {
+    border: 3px solid var(--orange);
+    transition: all 0.2s ease;
+}
+
+.character-cont:hover{
+    border: 6px solid var(--orange);
+    transform: scale(1.1, 1.1);
+    transform-origin: center center;
+}
+
+.character-cont img {
+    width: 100%;
+}
+
+.page-cont {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 2%;
+}
+
+
+
+.page-btn {
+    background-color: transparent;
+    color: var(--white);
+    font-weight: 800;
+    border: 1px solid var(--orange);
+    font-size: 16px;
+    transition: all 0.2s ease;
+    padding: 10px 12px;
+}
+
+.page-btn:hover {
+    background-color: var(--orange);
+    transform: scale(1.1, 1.1);
+}
+
+#btn-prev {
+    margin-left: 15%;
+}
+
+
+#btn-next {
+    margin-right: 15%;
 }
