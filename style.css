@@ -43,7 +43,6 @@ nav {
     width: 20%;
     justify-content: space-between;
     align-items: center;
-
 }
 
 nav ul {
@@ -52,13 +51,30 @@ nav ul {
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
+    height: 40px;
+    padding-top: 10px;
 }
 
 ul li {
     font-size: 18px;
     font-weight: 700;
     transition: all 0.2s ease-in;
+    display: grid;
+    place-content: center;
+    height: 40px;
 }
+
+ul li a {
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.2s ease-in;
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+ul li a:hover{
+    color: var(--orange);
+}
+
 ul li:hover {
     color: var(--orange);
 }
@@ -73,6 +89,7 @@ ul li:hover {
     height: 40px;
     transition: all 0.2s ease-in;
 }
+
 
 .btn-sup:hover {
     background-color: var(--orange);
