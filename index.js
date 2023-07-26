@@ -1,12 +1,34 @@
 let characters = [];
 let selectedCharacters = [];
+let link = 'https://rickandmortyapi.com/api/character';
+let btnNext;
+let btnPrev;
 
-const getCard = () => {
+
+const getPage = (url) => {
     $.ajax({
         type: 'GET',
-        url: 'https://rickandmortyapi.com/api/character',
+        url: `${url}`,
+        success: function (resp) {
+
+            console.log(resp);
+            
+            getCard(link);
+
+            btnNext = resp.info.next ? $('#btn-next').attr(`data-url`, `${resp.info.next}`) : '';
+
+            btnPrev = resp.info.prev ? $('#btn-prev').attr(`data-url`, `${resp.info.prev}`) : '';
+        }
+    })
+}
+
+const getCard = (url) => {
+    $.ajax({
+        type: 'GET',
+        url: `${url}`,
         success: function (result) {
             characters = result.results;
+            console.log(result);
             allCharacters();
             renderCharacters();
             
@@ -86,18 +108,31 @@ function allCharacters() {
 
 $(document).ready(function ($) {
     
+    getPage(link);
     
-    getCard();
     
 
+    //Botón random
     $('#random').on("click", function () {
-        $(".kard").remove()
+        $(".kard").remove();
         renderCharacters();
     })
 
+    //Botón para cerrar el modal
     $("#btn-close").on("click", function () {
             $("#modal-window").hide();
-        })
+    })
+    
+
+    //Botones next y prev
+
+    $('.page-btn').on('click', function (e) {
+        $(".character").remove();
+        
+        let value = e.target.dataset.url;
+        console.log(value)
+        getCard(value);
+    })
 
     
 })
