@@ -284,10 +284,16 @@ footer {
 .page-cont {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 2%;
 }
 
+.next-prev-cont {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
 
 
 .page-btn {

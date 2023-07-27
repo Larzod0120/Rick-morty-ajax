@@ -13,7 +13,7 @@ const getPage = (url) => {
 
             console.log(resp);
             
-            getCard(link);
+            getCard(url);
 
             btnNext = resp.info.next ? $('#btn-next').attr(`data-url`, `${resp.info.next}`) : '';
 
@@ -131,7 +131,7 @@ $(document).ready(function ($) {
         
         let value = e.target.dataset.url;
         console.log(value)
-        getCard(value);
+        getPage(value);
     })
 
     
