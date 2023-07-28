@@ -103,7 +103,12 @@ function allCharacters() {
     })
 }
 
-
+//Ir al inicio de la sección
+const goToTop = () => {
+    document.body.scrollIntoView({
+    behavior: "smooth",
+    });
+};
 
 
 $(document).ready(function ($) {
@@ -128,6 +133,8 @@ $(document).ready(function ($) {
 
     $('.page-btn').on('click', function (e) {
         $(".character").remove();
+        
+        goToTop();
         
         let value = e.target.dataset.url;
         console.log(value)
